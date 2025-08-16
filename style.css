@@ -1,0 +1,176 @@
+/* Estilos Gerais da Página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fffaf0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header.topo {
+    background: rgb(150, 17, 17);
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.preco {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+/* Seções */
+section {
+    padding: 2em 1em;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: rgb(150, 17, 17);
+}
+
+/* Categorias lado a lado no desktop */
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+/* Estilo lista */
+.categoria h3 {
+    color: rgb(150, 17, 17);
+    margin-bottom: 0.5em;
+}
+
+.categoria ul {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.categoria ul li {
+    padding: 0.3em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.categoria ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 500px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Estilos de Contato */
+#contato p {
+    font-size: 1.1em;
+}
+
+#contato a {
+    color: rgb(203, 133, 133);
+    text-decoration: none;
+}
+
+.botao-maps {
+    display: inline-block;
+    background: rgb(150, 17, 17);
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: rgb(150, 17, 17);
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+    header.topo h1 {
+        font-size: 1.8em;
+    }
+    .preco {
+        font-size: 1.4em;
+    }
+    section {
+        padding: 1.5em 1em;
+    }
+}
